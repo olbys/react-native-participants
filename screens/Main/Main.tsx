@@ -6,8 +6,6 @@ import useColorScheme from "../../hooks/useColorScheme";
 import {CustomIcon} from "../../components/CustomIcon";
 import {createStackNavigator} from "@react-navigation/stack";
 import Formations from "./FormationScreen/Formations";
-import CustomHeader from "../../components/CustomHeader";
-import {Button} from "native-base";
 import variables from "../../assets/variables";
 
 
@@ -44,19 +42,19 @@ function TabFormationsNavigator() {
                 headerTintColor: '#ffffff',
                 headerStyle: {
                     backgroundColor: variables.mainOrange_100,
+                    elevation: 0,
                 },
                 headerRight: () => (
                     <CustomIcon type={"FontAwesome"} iconName={'th'}/>
                 ),
                 headerRightContainerStyle: {
                     marginRight: 20,
-                    alignItems: "center",
-                }
+                },
 
             }}
         >
             <TabFormationsStack.Screen
-                name="LearningRoad"
+                name="Mes Formations"
                 component={Formations}
             />
         </TabFormationsStack.Navigator>

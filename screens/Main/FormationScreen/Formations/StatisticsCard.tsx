@@ -11,11 +11,11 @@ interface IStatisticsCard {
 export default function StatisticsCard({title, value}: IStatisticsCard) {
 
     return (
-        <Card>
+        <Card style={Styles.card}>
             <CardItem style={Styles.cardDim}>
                 <Grid>
                     <Row style={Styles.row}>
-                        <Col>
+                        <Col style={{ width: '70%' }}>
                             <Text style={Styles.title}>{title}</Text>
                         </Col>
                         <Col>
@@ -28,10 +28,13 @@ export default function StatisticsCard({title, value}: IStatisticsCard) {
     );
 };
 export const Styles = StyleSheet.create({
-    cardDim: {
-        height: 60,
-        borderBottomColor : "#ffffff",
+    card:{
         borderRadius:20,
+    },
+    cardDim: {
+        height: 100,
+        marginRight:20,
+        marginLeft:20,
     },
     row: {
         alignItems: "center"

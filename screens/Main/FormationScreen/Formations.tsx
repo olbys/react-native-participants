@@ -9,6 +9,7 @@ import {getSessionsMine} from "./Service";
 import {sessionsFormationExtend} from "../../../mock/sessions";
 import {Parcours} from "../../../types/parcours";
 import ItemListParcours from "../../../components/ItemListParcours";
+import variables from "../../../assets/variables";
 
 interface IFormations {
 
@@ -62,21 +63,14 @@ export default function Formations({}: IFormations) {
 
     return (
         <Container style={{}}>
-            {/*<CustomHeader/>*/}
             <Content style={[Styles.frameBackground]}>
                 <Grid style={[Styles.subHearder]}>
-                    <Row>
-                        <Text style={[Styles.Subtitle]}>Mes formations</Text>
+                    <Row style={Styles.titleRow}>
+                        {/*<Text style={Styles.title}>Mes formations</Text>*/}
                     </Row>
-                    <Row style={[Styles.spacing, {
-                        zIndex: 200, // works on ios
-                        elevation: 200,
-                    }]}>
+                    <Row  style={{paddingLeft:15, paddingRight:15, marginTop:-70}}>
                         <Col>
-                            <StatisticsCard title={"Complétions Gobale"} value={12}/>
-                        </Col>
-                        <Col>
-                            <StatisticsCard title={"Score Gobal"} value={14}/>
+                            <StatisticsCard title={"Complétions globale"} value={12}/>
                         </Col>
                     </Row>
                 </Grid>
