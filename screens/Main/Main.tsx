@@ -7,6 +7,8 @@ import {CustomIcon} from "../../components/CustomIcon";
 import {createStackNavigator} from "@react-navigation/stack";
 import Formations from "./FormationScreen/Formations";
 import variables from "../../assets/variables";
+import {Button, Icon} from "native-base";
+import {Text, TouchableHighlight, TouchableOpacity, View} from "react-native";
 
 
 interface IMain {
@@ -34,6 +36,10 @@ export default function Main({}: IMain) {
 const TabFormationsStack = createStackNavigator();
 
 function TabFormationsNavigator() {
+
+    const onPress = () => {
+        alert('message');
+    }
     return (
         <TabFormationsStack.Navigator
             headerMode="screen"
@@ -44,13 +50,30 @@ function TabFormationsNavigator() {
                     backgroundColor: variables.mainOrange_100,
                     elevation: 0,
                 },
-                headerRight: () => (
-                    <CustomIcon type={"FontAwesome"} iconName={'th'}/>
+                headerTitleStyle:{
+                    fontSize:17,
+                    alignSelf: 'center'
+                },
+                headerTitleContainerStyle:{
+                  alignSelf:"center",
+                    justifyCenter:'center'
+                },
+                headerLeftContainerStyle:{
+                    marginLeft:10,
+                },
+                headerBackImage:props => (
+                    <CustomIcon iconName={'ios-arrow-back'} type={"Ionicons"}/>
                 ),
                 headerRightContainerStyle: {
-                    marginRight: 20,
+                    marginRight: 10,
                 },
-
+                headerRight: props => (
+                    <TouchableOpacity
+                        style={{ alignItems: "center", padding: 10}}
+                        onPress={onPress}  activeOpacity={2}>
+                        <CustomIcon iconName={'list'} type={'Feather'}/>
+                    </TouchableOpacity>
+                ),
             }}
         >
             <TabFormationsStack.Screen

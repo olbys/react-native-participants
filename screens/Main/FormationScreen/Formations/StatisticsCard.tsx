@@ -40,7 +40,7 @@ export const Styles = StyleSheet.create({
         alignItems: "center"
     },
     title: {
-        textAlign: "center",
+        textAlign: "left",
         color: variables.mainBlack_60,
         fontSize: 12,
     },
