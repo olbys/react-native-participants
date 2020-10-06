@@ -7,7 +7,7 @@ export const Styles = StyleSheet.create({
         backgroundColor: variables.ligthGrey,
         paddingRight: 0,
         paddingLeft: 0,
-        fontFamily:'karla'
+        fontFamily:'Roboto'
 
     },
     subHearder: {},

@@ -92,10 +92,10 @@ export default function Formations({}: IFormations) {
                 {/*       </Row>*/}
                 {/*    </Grid>*/}
                 {/*))}*/}
-                <List style={{backgroundColor: "#ffffff"}}>
+                <List style={{}}>
                     {parcoursList.map((session, index) => (
                         session.parcours.map((parcours) => (
-                            <ItemListParcours key={index} parcours={parcours}/>
+                            <ItemListParcours  key={index} parcours={parcours}/>
                         ))
 
                     ))}
