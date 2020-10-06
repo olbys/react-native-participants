@@ -1,7 +1,8 @@
 import { StyleSheet } from "react-native";
-import variables from "../../assets/variables";
+import variables from "../assets/variables";
 
-export const Styles = StyleSheet.create({
+
+export const MainStyle = StyleSheet.create({
     image: {
         marginTop: 20,
         alignSelf: "center",
@@ -33,4 +34,4 @@ export const Styles = StyleSheet.create({
         width:'auto'
     }
 });
-export default Styles;
+export default MainStyle;
